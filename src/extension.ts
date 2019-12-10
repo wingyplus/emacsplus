@@ -1,7 +1,7 @@
-import * as vscode from 'vscode';
+import * as vscode from "vscode";
 import {
 	moveBeginingOfLine, moveEndOfLine, backwardChar, forwardChar, nextLine, previousLine, backToIdentation
-} from './command';
+} from "./command";
 
 // this method is called when your extension is activated.
 export function activate(context: vscode.ExtensionContext) {
