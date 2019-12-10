@@ -3,7 +3,7 @@ import {
 	moveBeginingOfLine, moveEndOfLine, backwardChar, forwardChar, nextLine, previousLine, backToIdentation
 } from "./command";
 import {
-	xrefFindDefinition,
+	xrefFindDefinition, xrefPopMarkerStack,
 } from "./xref";
 
 // this method is called when your extension is activated.
@@ -16,6 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(vscode.commands.registerTextEditorCommand("emacsplus.previousLine", previousLine));
 	context.subscriptions.push(vscode.commands.registerTextEditorCommand("emacsplus.backToIndentation", backToIdentation));
 	context.subscriptions.push(vscode.commands.registerTextEditorCommand("emacsplus.xrefFindDefinition", xrefFindDefinition));
+	context.subscriptions.push(vscode.commands.registerTextEditorCommand("emacsplus.xrefPopMarkerStack", xrefPopMarkerStack));
 }
 
 // this method is called when your extension is deactivated.
