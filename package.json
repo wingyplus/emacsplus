@@ -11,8 +11,11 @@
 	],
 	"activationEvents": [
 		"onCommand:emacsplus.moveBeginingOfLine",
-		"onCommand:emacsplus.moveEndOfLine"
-
+		"onCommand:emacsplus.moveEndOfLine",
+		"onCommand:emacsplus.backwardChar",
+		"onCommand:emacsplus.forwardChar",
+		"onCommand:emacsplus.nextLine",
+		"onCommand:emacsplus.previousLine"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -42,6 +45,38 @@
 				"key": "ctrl+e",
 				"when": "editorTextFocus",
 				"command": "emacsplus.moveEndOfLine"
+			},
+			{
+				"win": "ctrl+b",
+				"mac": "ctrl+b",
+				"linux": "ctrl+b",
+				"key": "ctrl+b",
+				"when": "editorTextFocus",
+				"command": "emacsplus.backwardChar"
+			},
+			{
+				"win": "ctrl+f",
+				"mac": "ctrl+f",
+				"linux": "ctrl+f",
+				"key": "ctrl+f",
+				"when": "editorTextFocus",
+				"command": "emacsplus.forwardChar"
+			},
+			{
+				"win": "ctrl+n",
+				"mac": "ctrl+n",
+				"linux": "ctrl+n",
+				"key": "ctrl+n",
+				"when": "editorTextFocus",
+				"command": "emacsplus.nextLine"
+			},
+			{
+				"win": "ctrl+p",
+				"mac": "ctrl+p",
+				"linux": "ctrl+p",
+				"key": "ctrl+p",
+				"when": "editorTextFocus",
+				"command": "emacsplus.previousLine"
 			}
 		]
 	},
