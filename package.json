@@ -16,7 +16,8 @@
 		"onCommand:emacsplus.forwardChar",
 		"onCommand:emacsplus.nextLine",
 		"onCommand:emacsplus.previousLine",
-		"onCommand:emacsplus.backToIndentation"
+		"onCommand:emacsplus.backToIndentation",
+		"onCommand:emacsplus.xrefFindDefinition"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -90,6 +91,14 @@
 				"key": "alt+m",
 				"when": "editorTextFocus",
 				"command": "emacsplus.backToIndentation"
+			},
+			{
+				"win": "alt+.",
+				"mac": "alt+.",
+				"linux": "alt+.",
+				"key": "alt+.",
+				"when": "editorTextFocus && !isInEmbeddedEditor",
+				"command": "emacsplus.xrefFindDefinition"
 			}
 		]
 	},
