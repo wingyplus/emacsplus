@@ -117,6 +117,13 @@
 				"key": "alt+g alt+g",
 				"when": "editorTextFocus && !isInEmbeddedEditor",
 				"command": "emacsplus.gotoLine"
+			},
+			{
+				"win": "ctrl+g",
+				"mac": "ctrl+g",
+				"linux": "ctrl+g",
+				"key": "ctrl+g",
+				"command": "-workbench.action.gotoLine"
 			}
 		]
 	},
