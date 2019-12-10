@@ -60,6 +60,8 @@ export const backToIdentation = (editor: vscode.TextEditor) => {
     editor.selection = new vscode.Selection(pos, pos);
 };
 
+export const gotoLine = () => vscode.commands.executeCommand("workbench.action.gotoLine");
+
 const moveCursor = (editor: vscode.TextEditor, moveTo: "backward" | "forward" | "previous" | "next") => {
     let pos = editor.selection.active;
 

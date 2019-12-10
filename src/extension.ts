@@ -1,6 +1,6 @@
 import * as vscode from "vscode";
 import {
-	moveBeginingOfLine, moveEndOfLine, backwardChar, forwardChar, nextLine, previousLine, backToIdentation
+	moveBeginingOfLine, moveEndOfLine, backwardChar, forwardChar, nextLine, previousLine, backToIdentation, gotoLine
 } from "./command";
 import {
 	xrefFindDefinition, xrefPopMarkerStack,
@@ -17,6 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(vscode.commands.registerTextEditorCommand("emacsplus.backToIndentation", backToIdentation));
 	context.subscriptions.push(vscode.commands.registerTextEditorCommand("emacsplus.xrefFindDefinition", xrefFindDefinition));
 	context.subscriptions.push(vscode.commands.registerTextEditorCommand("emacsplus.xrefPopMarkerStack", xrefPopMarkerStack));
+	context.subscriptions.push(vscode.commands.registerTextEditorCommand("emacsplus.gotoLine", gotoLine));
 }
 
 // this method is called when your extension is deactivated.

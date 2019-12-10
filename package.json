@@ -18,7 +18,8 @@
 		"onCommand:emacsplus.previousLine",
 		"onCommand:emacsplus.backToIndentation",
 		"onCommand:emacsplus.xrefFindDefinition",
-		"onCommand:emacsplus.xrefPopMarkerStack"
+		"onCommand:emacsplus.xrefPopMarkerStack",
+		"onCommand:emacsplus.gotoLine"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -108,6 +109,14 @@
 				"key": "alt+,",
 				"when": "editorTextFocus && !isInEmbeddedEditor",
 				"command": "emacsplus.xrefPopMarkerStack"
+			},
+			{
+				"win": "alt+g alt+g",
+				"mac": "alt+g alt+g",
+				"linux": "alt+g alt+g",
+				"key": "alt+g alt+g",
+				"when": "editorTextFocus && !isInEmbeddedEditor",
+				"command": "emacsplus.gotoLine"
 			}
 		]
 	},
