@@ -2,6 +2,10 @@
 	"name": "emacsplus",
 	"displayName": "emacsplus",
 	"description": "An Emacs key bindings for Visual Studio Code",
+	"repository": {
+		"url": "https://github.com/wingyplus/emacsplus"
+	},
+	"publisher": "wingyplus",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.40.0"
