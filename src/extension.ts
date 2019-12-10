@@ -26,6 +26,14 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const previousLine = (editor: vscode.TextEditor) => moveCursor(editor, 'previous');
 	context.subscriptions.push(vscode.commands.registerTextEditorCommand("emacsplus.previousLine", previousLine));
+
+	const backToIdentation = (editor: vscode.TextEditor) => {
+		const pos = editor.selection.active.with({
+			character: editor.document.lineAt(editor.selection.active.line).firstNonWhitespaceCharacterIndex
+		});
+		editor.selection = new vscode.Selection(pos, pos);
+	};
+	context.subscriptions.push(vscode.commands.registerTextEditorCommand("emacsplus.backToIndentation", backToIdentation));
 }
 
 // this method is called when your extension is deactivated.

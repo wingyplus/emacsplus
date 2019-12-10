@@ -15,7 +15,8 @@
 		"onCommand:emacsplus.backwardChar",
 		"onCommand:emacsplus.forwardChar",
 		"onCommand:emacsplus.nextLine",
-		"onCommand:emacsplus.previousLine"
+		"onCommand:emacsplus.previousLine",
+		"onCommand:emacsplus.backToIndentation"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -27,6 +28,10 @@
 			{
 				"command": "emacsplus.moveEndOfLine",
 				"title": "Move End Of Line"
+			},
+			{
+				"command": "emacsplus.backToIndentation",
+				"title": "Back To Indentation"
 			}
 		],
 		"keybindings": [
@@ -77,6 +82,14 @@
 				"key": "ctrl+p",
 				"when": "editorTextFocus",
 				"command": "emacsplus.previousLine"
+			},
+			{
+				"win": "alt+m",
+				"mac": "alt+m",
+				"linux": "alt+m",
+				"key": "alt+m",
+				"when": "editorTextFocus",
+				"command": "emacsplus.backToIndentation"
 			}
 		]
 	},
