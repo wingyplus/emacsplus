@@ -3,17 +3,19 @@ import * as vscode from "vscode";
 /**
  * move cursor to beginning of line.
  */
-export const moveBeginingOfLine = (editor: vscode.TextEditor) => {
-    const begin = editor.selection.active.with({ character: 0 });
-    editor.selection = new vscode.Selection(begin, begin);
+export const moveBeginingOfLine = async () => {
+    await vscode.commands.executeCommand("cursorMove", {
+        to: "wrappedLineStart",
+    });
 };
 
 /**
  * move cursor to end of line.
  */
-export const moveEndOfLine = (editor: vscode.TextEditor) => {
-    const end = editor.document.lineAt(editor.selection.active.line).range.end;
-    editor.selection = new vscode.Selection(end, end);
+export const moveEndOfLine = async () => {
+    await vscode.commands.executeCommand("cursorMove", {
+        to: "wrappedLineEnd",
+    });
 };
 
 /**
@@ -39,11 +41,10 @@ export const previousLine = () => moveCursor("previous");
 /**
  * move cursor to first non-whitespace character.
  */
-export const backToIdentation = (editor: vscode.TextEditor) => {
-    const pos = editor.selection.active.with({
-        character: editor.document.lineAt(editor.selection.active.line).firstNonWhitespaceCharacterIndex
+export const backToIdentation = async () => {
+    await vscode.commands.executeCommand("cursorMove", {
+        to: "wrappedLineFirstNonWhitespaceCharacter",
     });
-    editor.selection = new vscode.Selection(pos, pos);
 };
 
 export const gotoLine = () => vscode.commands.executeCommand("workbench.action.gotoLine");
