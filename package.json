@@ -123,13 +123,6 @@
 				"command": "emacsplus.gotoLine"
 			},
 			{
-				"win": "ctrl+g",
-				"mac": "ctrl+g",
-				"linux": "ctrl+g",
-				"key": "ctrl+g",
-				"command": "-workbench.action.gotoLine"
-			},
-			{
 				"win": "ctrl+s",
 				"mac": "ctrl+s",
 				"linux": "ctrl+s",
@@ -138,16 +131,8 @@
 				"command": "actions.find"
 			},
 			{
-				"key": "cmd+f",
-				"command": "-actions.find"
-			},
-			{
 				"key": "shift+alt+5",
 				"command": "editor.action.startFindReplaceAction"
-			},
-			{
-				"key": "alt+cmd+f",
-				"command": "-editor.action.startFindReplaceAction"
 			}
 		]
 	},
